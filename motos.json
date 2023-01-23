@@ -1,0 +1,116 @@
+[
+    {
+        "id" : 1,
+        "nom": "Panigale V4A",
+        "marque": "Ducati",
+        "img": "./images/Ducati/Panigale-V4a.jpg"
+    },
+    {
+        "id" : 2,
+        "nom": "Diavel 1260",
+        "marque": "Ducati",
+        "img": "images/Ducati/Diavel 1260.jpg" 
+    },
+    {
+        "id" : 3,
+        "nom": "Monster 1200 S",
+        "marque": "Ducati",
+        "img": "images/Ducati/Monster 1200 S.jpg"
+    },
+    {
+        "id" : 4,
+        "nom": "Scrambler",
+        "marque": "Ducati",
+        "img": "images/Ducati/Scrambler.jpg"
+    },
+    {
+        "id" : 5,
+        "nom": "Streetfighter V4",
+        "marque": "Ducati",
+        "img": "images/Ducati/Streetfighter V4.jpg"
+    },
+    {
+        "id" : 6,
+        "nom": "Z900 RS",
+        "marque": "Kawasaki",
+        "img": "images/Kawasaki/Z900RS.jpg"
+    },
+    {
+        "id" : 7,
+        "nom": "Z1000 R",
+        "marque": "Kawasaki",
+        "img": "images/Kawasaki/Z1000 R.jpg"
+    },
+    {
+        "id" : 8,
+        "nom": "Z900",
+        "marque": "Kawasaki",
+        "img": "images/Kawasaki/Z900.jpg"
+    },
+    {
+        "id" : 9,
+        "nom": "Ninja H2R",
+        "marque": "Kawasaki",
+        "img": "images/Kawasaki/Ninja H2R.jpg"
+    },
+    {
+        "id" : 10,
+        "nom": "Ninja ZX 10R",
+        "marque": "Kawasaki",
+        "img": "images/Kawasaki/Ninja-ZX-10R.jpg"
+    },
+    {
+        "id" : 11,
+        "nom": "1190 CR",
+        "marque": "KTM",
+        "img": "images/KTM/1190 CR.jpg"
+    },
+    {
+        "id" : 12,
+        "nom": "Duke 890 R1",
+        "marque": "KTM",
+        "img": "images/KTM/Duke 890 R1.jpg"
+    },
+    {
+        "id" : 13,
+        "nom": "990 SMR",
+        "marque": "KTM",
+        "img": "images/KTM/990-SMR.jpg"
+    },
+    {
+        "id" : 14,
+        "nom": "1190 ADVENTURE",
+        "marque": "KTM",
+        "img": "images/KTM/1190-ADVENTURE.jpg"
+    },
+    {
+        "id" : 15,
+        "nom": "GSX-S750",
+        "marque": "Suzuki",
+        "img": "images/Suzuki/GSX-S750.jpg"
+    },
+    {
+        "id" : 16,
+        "nom": "GSX-R 1000 R",
+        "marque": "Suzuki",
+        "img": "images/Suzuki/GSX-R 1000 R.jpg"
+    },
+    {
+        "id" : 17,
+        "nom": "GSX R 600",
+        "marque": "Suzuki",
+        "img": "images/Suzuki/GSX R 600.jpg"
+    },
+    {
+        "id" : 18,
+        "nom": "Intruder C800",
+        "marque": "Suzuki",
+        "img": "images/Suzuki/intruder-c800.jpg"
+    },
+    {
+        "id" : 19,
+        "nom": "V-Storm 1000 XT",
+        "marque": "Suzuki",
+        "img": "images/Suzuki/V-Storm 1000 XT.jpg"
+    }
+]
