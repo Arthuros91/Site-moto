@@ -2,6 +2,8 @@ const reponse = await fetch('motos.json');
 const motos = await reponse.json();
 
 
+
+
 const section = document.querySelector(".moto");
 
 //titre
@@ -30,10 +32,14 @@ for (let i = 0; i < motos.length; i++){
     motoMarque.innerText = moto.marque;
     const motoImg = document.createElement("img");
     motoImg.src = moto.img;
+    const motoCylindree = document.createElement("h5");
+    moto.cylindrée === "1400" ? motoCylindree.innerHTML = "Superbike" : motoCylindree.innerHTML = moto.cylindrée + "cc";
 
     motoCase.appendChild(motoImg);
-    motoCase.appendChild(motoTitre);
     motoCase.appendChild(motoMarque);
+    motoCase.appendChild(motoTitre);
+    motoCase.appendChild(motoCylindree);
+    
 
 }
 }
@@ -41,6 +47,8 @@ for (let i = 0; i < motos.length; i++){
 function updatePage(moto){
     motoGrid.innerHTML = "";
     générerPage(moto);
+    cylindreeValueText.innerHTML = cylindree.value + "cc";
+    cylindree.value === "1400" ? cylindreeValueText.innerHTML = "Superbike" : cylindreeValueText.innerHTML = cylindree.value + "cc";
 }
 
 générerPage(motos);
@@ -64,8 +72,8 @@ btnDucati.addEventListener("click",function(){
     const listMotosDucati = motos.filter(function(moto){
         return moto.marque === "Ducati";
     });
-    motoGrid.innerHTML = "";
-    générerPage(listMotosDucati);
+
+    updatePage(listMotosDucati);
     });
 
 
@@ -76,8 +84,7 @@ btnKawasaki.addEventListener("click",function(){
     const listMotosKawa = motos.filter(function(moto){
         return moto.marque === "Kawasaki";
     });
-    motoGrid.innerHTML = "";
-    générerPage(listMotosKawa);
+    updatePage(listMotosKawa);
     });
 
 
@@ -88,8 +95,7 @@ btnSuzuki.addEventListener("click",function(){
     const listMotosSuzuki = motos.filter(function(moto){
         return moto.marque === "Suzuki";
     });
-    motoGrid.innerHTML = "";
-    générerPage(listMotosSuzuki);
+    updatePage(listMotosSuzuki);
     });
 
 
@@ -100,8 +106,23 @@ btnKTM.addEventListener("click",function(){
     const listMotosKTM = motos.filter(function(moto){
         return moto.marque === "KTM";
     });
-    motoGrid.innerHTML = "";
-    générerPage(listMotosKTM);
+    updatePage(listMotosKTM);
     });
 
+
+/* Cylindrée bar*/
+
+const cylindree = document.querySelector("#Cylindrée");
+cylindree.addEventListener("input",function(){
+    const motoslist = motos.filter(function(moto){  
+        return moto.cylindrée <= cylindree.value;
+
+    });
+    updatePage(motoslist);
+
+});
+
+
+const cylindreeValueText = document.querySelector("p");
+cylindreeValueText.innerHTML = cylindree.value + "cc";
 

@@ -17,6 +17,8 @@ main{
     font-family: Unbounded;
     src: url(./Unbounded.ttf);
 }
+
+
 /* HEADER */ 
 
 figure{
@@ -71,10 +73,11 @@ li{
     /* Buttons */
 
 .btn{
-    margin: 50px 20px;
+    margin: 30px 20px;
     border-radius: 20px;
     
 }
+
 .btn:hover{
     background-color: grey;
 }
@@ -113,6 +116,7 @@ li{
     padding :20px; 
     margin: 0px 0px 20px 0px;
 }
+
 .moto_grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -129,6 +133,7 @@ li{
     border-radius: 30px;
     padding:2px;
 }
+
 .moto_case img{
     width: 100%;
     display: flex;
@@ -141,3 +146,23 @@ li{
     margin: 0px 0px 5px 0px;
 }
 
+.moto_case h5{
+    margin-top:0px;
+}
+
+/*Selecteur*/
+
+#selecteurTitle{
+    margin-left: 0px;
+}
+
+#Cylindrée{
+    width:90%;
+    margin-top:20px;
+}
+p{
+    margin-bottom: 500px;
+    margin-left:100px;
+    align-self: center;
+    justify-self: center;
+}
