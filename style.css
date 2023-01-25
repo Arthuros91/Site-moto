@@ -100,8 +100,25 @@ li{
 }
 
 
-/* MOTO */
+    /*Selecteur*/
 
+#selecteurTitle{
+    margin-left: 0px;
+}
+
+#Cylindrée{
+    width:90%;
+    margin-top:20px;
+}
+p{
+    margin-bottom: 500px;
+    margin-left:100px;
+    align-self: center;
+    justify-self: center;
+}
+
+
+/* MOTO */
 
 .moto{
     flex:2;
@@ -142,27 +159,66 @@ li{
 
 }
 
-.moto_case h4{
+h4{
     margin: 0px 0px 5px 0px;
 }
 
-.moto_case h5{
-    margin-top:0px;
+h5{
+    margin:0px
 }
 
-/*Selecteur*/
 
-#selecteurTitle{
-    margin-left: 0px;
+    /* Modale */
+
+#modal{
+    display: none;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    width:100%;
+    height:100%;
+
 }
 
-#Cylindrée{
-    width:90%;
-    margin-top:20px;
+#contenu_modal{
+    background-color: white;
+    width: 30%;
+    height:55%;
+    margin: 100px 300px;
+    overflow: auto;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-p{
-    margin-bottom: 500px;
-    margin-left:100px;
-    align-self: center;
-    justify-self: center;
+
+#contenu_modal img{
+    width:70%;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.btnDetails, .btnClose{
+    margin:10px 0px;
+    width:30%;
+    padding:5px;
+    border-radius: 20px;
+    background-color:rgba(194, 194, 194, 0.6);
+    border: 1p solid black;
+}
+
+.btnDetails:hover{
+    background-color: rgba(134, 134, 134, 0.6);
+}
+
+.btnDetails:active{
+    background-color: rgba(71, 71, 71, 0.6);
+}
+
+.btnClose:hover{
+    background-color: rgba(134, 134, 134, 0.6);
+}
+
+.btnClose:active{
+    background-color: rgba(71, 71, 71, 0.6);
 }

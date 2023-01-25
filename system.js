@@ -19,39 +19,84 @@ section.appendChild(motoGrid);
 //Cases
 function générerPage(motos){
 
-for (let i = 0; i < motos.length; i++){
+    for (let i = 0; i < motos.length; i++){
 
-    const moto = motos[i];
-    const motoCase = document.createElement("div");
-    motoCase.className = "moto_case";
-    motoGrid.appendChild(motoCase);
+        const moto = motos[i];
+        const motoCase = document.createElement("div");
+        motoCase.className = "moto_case";
+        motoGrid.appendChild(motoCase);
 
-    const motoTitre = document.createElement("h3");
-    motoTitre.innerText = moto.nom;
-    const motoMarque = document.createElement("h4");
-    motoMarque.innerText = moto.marque;
-    const motoImg = document.createElement("img");
-    motoImg.src = moto.img;
-    const motoCylindree = document.createElement("h5");
-    moto.cylindrée === "1400" ? motoCylindree.innerHTML = "Superbike" : motoCylindree.innerHTML = moto.cylindrée + "cc";
+        const motoTitre = document.createElement("h3");
+        motoTitre.innerText = moto.nom;
+        const motoMarque = document.createElement("h4");
+        motoMarque.innerText = moto.marque;
+        const motoImg = document.createElement("img");
+        motoImg.src = moto.img;
+        const motoCylindree = document.createElement("h5");
+        moto.cylindrée === "1400" ? motoCylindree.innerHTML = "Superbike" : motoCylindree.innerHTML = moto.cylindrée + "cc";
+        
+        const btnDetails = document.createElement("button");
+        btnDetails.innerText = "Détails";
+        btnDetails.className = "btnDetails";
 
-    motoCase.appendChild(motoImg);
-    motoCase.appendChild(motoMarque);
-    motoCase.appendChild(motoTitre);
-    motoCase.appendChild(motoCylindree);
-    
+        motoCase.appendChild(motoImg);
+        motoCase.appendChild(motoMarque);
+        motoCase.appendChild(motoTitre);
+        motoCase.appendChild(motoCylindree);
+        motoCase.appendChild(btnDetails);
 
-}
+        btnDetails.addEventListener("click", function(){
+            contenuModale.innerHTML = "";
+            afficherModale(moto);
+            });
+
+    }
 }
 
 function updatePage(moto){
     motoGrid.innerHTML = "";
     générerPage(moto);
-    cylindreeValueText.innerHTML = cylindree.value + "cc";
-    cylindree.value === "1400" ? cylindreeValueText.innerHTML = "Superbike" : cylindreeValueText.innerHTML = cylindree.value + "cc";
+    
 }
 
 générerPage(motos);
+
+
+//MODALE
+
+const modale = document.querySelector("#modal");
+const contenuModale = document.querySelector("#contenu_modal");
+
+function afficherModale(moto){
+
+    modale.style.display = "initial";
+
+    const titreModale = document.createElement("h3");
+    titreModale.innerText = moto.nom;
+    const marque = document.createElement("h4");
+    marque.innerText = moto.marque;
+    const photo = document.createElement("img");
+    photo.src = moto.img;
+    const cylindreeMoto = document.createElement("h5");
+    cylindreeMoto.innerText = "Cylindrée : " + moto.cylindrée + "cc";
+    const btnClose = document.createElement("button");
+    btnClose.innerText = "Fermer";
+    btnClose.className = "btnClose";
+
+    contenuModale.appendChild(titreModale);
+    contenuModale.appendChild(marque);
+    contenuModale.appendChild(photo);
+    contenuModale.appendChild(cylindreeMoto);
+    contenuModale.appendChild(btnClose);
+    
+    btnClose.addEventListener("click",function(){
+    modale.style.display = "none"
+    });
+};
+
+const btnDetails = document.querySelector(".btnDetails");
+
+
 
 // BOUTONS
 
